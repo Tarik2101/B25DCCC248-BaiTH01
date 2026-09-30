@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phạm Anh Tuấn - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Phạm Anh Tuấn</div>
+            <ul class="nav-links">
+                <li><a href="#about">Giới thiệu</a></li>
+                <li><a href="#skills">Kỹ năng</a></li>
+                <li><a href="#projects">Dự án</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+            <div class="actions">
+                <button id="theme-toggle" title="Chuyển chế độ Sáng/Tối"><i class="fa-solid fa-moon"></i></button>
+                <div class="hamburger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="reveal">
+            <h1>Xin chào, tôi là Phạm Anh Tuấn</h1>
+            <p>Tôi đến từ Tuyên Quang, hiện là sinh viên năm hai ngành Công nghệ thông tin (Cử nhân ứng dụng) tại Học viện Công nghệ Bưu chính Viễn thông Hà Nội, đang trên hành trình khám phá thế giới của công nghệ và dữ liệu.</p>
+            <p>Hiện tại, mình đang từng bước xây dựng nền tảng về lập trình, cơ sở dữ liệu và phân tích dữ liệu, đồng thời không ngừng cải thiện khả năng tư duy, giao tiếp và làm việc với mọi người. Mình tin rằng hành trình phát triển không chỉ nằm ở những kiến thức được học trong trường, mà còn ở những trải nghiệm, dự án và thử thách mình chủ động tìm kiếm.</p>
+        </section>
+
+        <section id="skills" class="reveal">
+            <h2>Kỹ năng nổi bật (ở mức cơ bản)</h2>
+            <div class="skills-grid">
+                <div class="skill">HTML/CSS/JS</div>
+                <div class="skill">Python</div>
+                <div class="skill">SQL (MySQL)</div>
+                <div class="skill">Java</div>
+                <div class="skill">Git & GitHub</div>
+            </div>
+        </section>
+
+        <section id="projects" class="reveal">
+            <h2>Dự án của tôi</h2>
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">Tất cả</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="data">Data / App</button>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card" data-category="data">
+                    <h3>Quản lý chi tiêu (Python)</h3>
+                    <p>Ứng dụng dòng lệnh giúp ghi lại các giao dịch tài chính, tính toán tổng số dư và lưu trữ dữ liệu liên tục vào file text.</p>
+                </div>
+                <div class="project-card" data-category="web">
+                    <h3>Pháo hoa HTML5 Canvas</h3>
+                    <p>Trang web sử dụng HTML5 Canvas và JavaScript thuần để mô phỏng hiệu ứng vật lý và hạt của pháo hoa đẹp mắt.</p>
+                </div>
+                <div class="project-card" data-category="data">
+                    <h3>Database Cửa hàng thời trang</h3>
+                    <p>Thiết kế lược đồ quan hệ, các ràng buộc và viết truy vấn SQL trên MySQL Workbench cho một hệ thống quản lý cửa hàng thời trang.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="reveal">
+            <h2>Liên hệ với tôi</h2>
+            <form id="contact-form">
+                <div class="form-control">
+                    <label for="name">Họ và tên</label>
+                    <input type="text" id="name" placeholder="Nhập tên của bạn">
+                    <small>Thông báo lỗi</small>
+                </div>
+                <div class="form-control">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" placeholder="Nhập email của bạn">
+                    <small>Thông báo lỗi</small>
+                </div>
+                <div class="form-control">
+                    <label for="message">Lời nhắn</label>
+                    <textarea id="message" rows="4" placeholder="Nhập lời nhắn..."></textarea>
+                    <div class="char-counter"><span id="char-current">0</span> / 200 ký tự</div>
+                    <small>Thông báo lỗi</small>
+                </div>
+                <button type="submit" class="submit-btn">Gửi Liên Hệ</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Anh Tuấn. Bản quyền thuộc về tác giả.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
